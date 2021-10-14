@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Typo_StromB";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./Typo_StormB.ttf");
+}
+@font-face {
+  font-family: "NanumPenScript";
+  src: url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "NixGon";
+  src: url("./NixGon.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "AppleSDB";
+  src: url("./AppleSDGothicNeoB.ttf");
+  font-weight: bold;
+}

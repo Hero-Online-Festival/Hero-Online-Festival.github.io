@@ -1,19 +1,17 @@
 import { Global, css } from "@emotion/react";
 import React from "react";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
-import { MainPage } from "../page/main";
-
-// page
-
-const PrivateRoute = (props: RouteProps) => {
-  return <Route {...props} />;
-};
+import { LandingPage } from "../page/Landing";
+import { MainPage } from "../page/Main";
+import "../style/font/font.css";
 
 const GlobalCSS = css`
   body {
-    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
     height: 100vh;
-    margin: 0;
+    margin: auto;
     background-color: #eaeaea;
   }
 `;
@@ -23,7 +21,8 @@ const Router = (): React.ReactElement => {
     <BrowserRouter>
       <Global styles={GlobalCSS} />
       <Switch>
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/main" component={MainPage} />
       </Switch>
     </BrowserRouter>
   );
