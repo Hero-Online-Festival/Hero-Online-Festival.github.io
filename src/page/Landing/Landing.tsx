@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
+import { useHistory } from "react-router-dom";
 
 const Page = (): React.ReactElement => {
+  const history = useHistory();
+  setTimeout(() => {
+    history.push("/main");
+  }, 3000);
+
   return (
     <>
       <LandingPage>
@@ -38,12 +44,28 @@ const LandingTextWrapper = styled.div`
 
 const LandingText = styled.div`
   width: fit-content;
-  font-size: 2.5rem;
+  font-size: 5rem;
   text-align: center;
   line-height: 1.2;
   font-family: "NixGon";
   letter-spacing: 3px;
   color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+        0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+        0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
 `;
 
 const LandingPage = styled.div`
