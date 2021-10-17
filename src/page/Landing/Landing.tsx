@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useCallback } from "react";
 import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom";
 
 const Page = (): React.ReactElement => {
   const history = useHistory();
-  setTimeout(() => {
+  const onLinkToMain = () => {
+    console.log("asdf");
     history.push("/main");
-  }, 3000);
+  };
 
   return (
     <>
-      <LandingPage>
+      <LandingPage onClick={onLinkToMain}>
         <LandingTextWrapper>
           <LandingText>
             HERO
@@ -19,12 +20,22 @@ const Page = (): React.ReactElement => {
             <br />
             FESTIVAL
           </LandingText>
+          <LinkText>화면을 터치하세요!</LinkText>
         </LandingTextWrapper>
         <CopyWrite>46th Student Council of Engineering HERO</CopyWrite>
       </LandingPage>
     </>
   );
 };
+
+const LinkText = styled.div`
+  color: #ffff;
+  font-family: "NizGon";
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+  margin-top: 30px;
+`;
 
 const CopyWrite = styled.div`
   position: relative;

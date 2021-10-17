@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import styled from "@emotion/styled";
 
 interface IEvents {
@@ -28,7 +28,9 @@ export const Events = ({
 const EventsWrapper = styled.div`
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 30px;
   background-color: #fff;
+  cursor: pointer;
 `;
 
 const EventsTitle = styled.div`
