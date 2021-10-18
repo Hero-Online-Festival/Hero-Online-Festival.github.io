@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { MBTI } from "../../common/Selections";
+import { useDispatch } from "react-redux";
+import { updateMBTIAnswer } from "../../stores/mbti/mbti";
+
 interface ISelection {
   idx: number;
 }
 
 export const Selections = ({ idx }: ISelection): React.ReactElement => {
   const route = idx === 11 ? `/result/mbti` : `/mbti/${idx + 1}`;
-
+  const dispatch = useDispatch();
+  const onUpdateMBTIAnswer = useCallback(
+    (answer: number, idx: number) => {
+      dispatch(updateMBTIAnswer({ answer, questionIdx: idx }));
+    },
+    [dispatch]
+  );
   return (
     <>
       <SelectionsWrapper>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{MBTI[idx].selectionOne}</Selection>
+          <Selection onClick={() => onUpdateMBTIAnswer(1, idx)}>
+            {MBTI[idx].selectionOne}
+          </Selection>
         </Link>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{MBTI[idx].selectionTwo}</Selection>
+          <Selection onClick={() => onUpdateMBTIAnswer(-1, idx)}>
+            {MBTI[idx].selectionTwo}
+          </Selection>
         </Link>
       </SelectionsWrapper>
     </>
