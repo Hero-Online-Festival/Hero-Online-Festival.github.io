@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import { LandingPage } from "../page/Landing";
 import { MainPage } from "../page/Main";
+import { MBTIPage, MBTIResultPage } from "../page/MBTI";
+import { TrendPage, TrendResultPage } from "../page/Trend";
 import "../style/font/font.css";
 
 const GlobalCSS = css`
@@ -21,6 +23,10 @@ const Router = (): React.ReactElement => {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/main" component={MainPage} />
+        <Route exact path="/mbti/:idx" component={MBTIPage} />
+        <Route exact path="/mbti/result" component={MBTIResultPage} />
+        <Route exact path="/trend/:idx" component={TrendPage} />
+        <Route exact path="/trend/result" component={TrendResultPage} />
       </Switch>
     </BrowserRouter>
   );

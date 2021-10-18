@@ -14,31 +14,37 @@ const Page = (): React.ReactElement => {
               title="LCH"
               description="공대의 진짜 롤 챔피언은?"
               linkText="자세한 내용은 클릭"
+              link=""
             />
             <Events
               title="공대 가요제"
               description="공대 가왕은 누구?"
               linkText="자세한 내용은 클릭"
+              link=""
             />
             <Events
               title="히어로 게임"
               description="최후의 1인은 과연?"
               linkText="자세한 내용은 클릭"
+              link=""
             />
             <Events
               title="졸업생 & 현직자 멘토링"
               description="진로 고민 해결!!"
               linkText="자세한 내용은 클릭"
+              link=""
             />
             <Events
               title="이상형 학과 테스트"
               description="내 이상형은 어디에...?"
               linkText="테스트 하려면 클릭"
+              link="/mbti"
             />
             <Events
               title="내 안의 학번 테스트"
               description="내 진짜 학번은...?"
               linkText="테스트 하려면 클릭"
+              link="/trend"
             />
           </EventsWrapper>
         </MainWrapper>

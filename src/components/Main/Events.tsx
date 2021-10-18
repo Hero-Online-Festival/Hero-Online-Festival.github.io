@@ -1,20 +1,29 @@
 import React, { useState, useCallback } from "react";
 import styled from "@emotion/styled";
+import { useHistory } from "react-router-dom";
 
 interface IEvents {
   title: string;
   description: string;
   linkText: string;
+  link: string;
 }
 
 export const Events = ({
   title,
   description,
   linkText,
+  link,
 }: IEvents): React.ReactElement => {
+  const history = useHistory();
+  const onLinKTo = (link: string) => {
+    history.replace({
+      pathname: `${link}/1`,
+    });
+  };
   return (
     <>
-      <EventsWrapper>
+      <EventsWrapper onClick={() => onLinKTo(link)}>
         <EventsTitle>{title}</EventsTitle>
         <EventsTextWrapper>
           <EventsDescription>{description}</EventsDescription>
