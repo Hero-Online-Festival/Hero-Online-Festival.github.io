@@ -7,8 +7,6 @@ import "../style/font/font.css";
 
 const GlobalCSS = css`
   body {
-    position: fixed;
-    overflow: hidden;
     width: 100%;
     height: 100vh;
     margin: auto;
