@@ -1,6 +1,12 @@
 import { Global, css } from "@emotion/react";
 import React from "react";
-import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  RouteProps,
+  useLocation,
+} from "react-router-dom";
 import { LandingPage } from "../page/Landing";
 import { MainPage } from "../page/Main";
 import { MBTIPage, MBTIResultPage } from "../page/MBTI";
@@ -24,9 +30,9 @@ const Router = (): React.ReactElement => {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/main" component={MainPage} />
         <Route exact path="/mbti/:idx" component={MBTIPage} />
-        <Route exact path="/mbti/result" component={MBTIResultPage} />
+        <Route exact path="/result/mbti" component={MBTIResultPage} />
         <Route exact path="/trend/:idx" component={TrendPage} />
-        <Route exact path="/trend/result" component={TrendResultPage} />
+        <Route exact path="/result/trend" component={TrendResultPage} />
       </Switch>
     </BrowserRouter>
   );

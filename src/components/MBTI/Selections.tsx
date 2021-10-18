@@ -7,7 +7,7 @@ interface ISelection {
 }
 
 export const Selections = ({ idx }: ISelection): React.ReactElement => {
-  const route = idx === 12 ? `/mbti/result` : `/mbti/${idx + 1}`;
+  const route = idx === 11 ? `/result/mbti` : `/mbti/${idx + 1}`;
 
   return (
     <>
