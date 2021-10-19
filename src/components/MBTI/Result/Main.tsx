@@ -15,6 +15,7 @@ export const Main = ({ grade }: IMain): React.ReactElement => {
   return (
     <>
       <MainWrapper>
+        <Top>당신의 이상형은?</Top>
         <Title color={MBTI[grade].color}>{" " + MBTI[grade].title + " "}</Title>
         <MainImage grade={grade} />
         <SubTitle>{MBTI[grade].subTitle}</SubTitle>
@@ -22,6 +23,11 @@ export const Main = ({ grade }: IMain): React.ReactElement => {
     </>
   );
 };
+
+const Top = styled.div`
+  text-align: center;
+  font-family: "AppleSDB";
+`;
 
 const MainImage = styled.div`
   background-image: url(${(props: MainImage) => MBTI[props.grade].image});

@@ -78,6 +78,6 @@ const MainPage = styled.div`
   width: 100%;
   height: fit-content;
   background-color: #f2f0f0;
-  padding-bottom: 20px;
+  padding-bottom: 5rem;
 `;
 export default Page;
