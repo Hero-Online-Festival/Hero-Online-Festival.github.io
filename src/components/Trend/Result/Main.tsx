@@ -6,6 +6,10 @@ interface IMain {
   score: number;
 }
 
+type MainImage = {
+  score: number;
+};
+
 export const Main = ({ score }: IMain): React.ReactElement => {
   return (
     <>
@@ -13,13 +17,14 @@ export const Main = ({ score }: IMain): React.ReactElement => {
         <Title>{Trend[score].title}</Title>
         <SubTitle>{Trend[score].subTitle}</SubTitle>
         <Score>{Trend[score].score}</Score>
-        <MainImage />
+        <MainImage score={score} />
       </MainWrapper>
     </>
   );
 };
+
 const MainImage = styled.div`
-  background-image: url(${Trend[1].image});
+  background-image: url(${(props: MainImage) => Trend[props.score].image});
   background-size: cover;
   background-repeat: none;
   margin: auto;
