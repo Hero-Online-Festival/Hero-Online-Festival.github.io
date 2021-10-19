@@ -10,7 +10,7 @@ export const Question = ({ idx }: IQuestion): React.ReactElement => {
   return (
     <>
       <QuestionWrapper>
-        <QuestionIndex>{idx}번</QuestionIndex>
+        <QuestionIndex>{idx + 1}번</QuestionIndex>
         <QuestionBox>{MBTI[idx].question}</QuestionBox>
       </QuestionWrapper>
     </>

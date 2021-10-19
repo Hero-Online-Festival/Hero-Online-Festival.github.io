@@ -18,7 +18,7 @@ export const Events = ({
   const history = useHistory();
   const onLinKTo = (link: string) => {
     history.replace({
-      pathname: `${link}/1`,
+      pathname: `${link}/0`,
     });
   };
   return (

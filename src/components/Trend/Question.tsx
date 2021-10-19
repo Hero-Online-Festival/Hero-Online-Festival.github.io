@@ -10,12 +10,17 @@ export const Question = ({ idx }: IQuestion): React.ReactElement => {
   return (
     <>
       <QuestionWrapper>
-        <QuestionIndex>{idx}번</QuestionIndex>
-        <QuestionBox>{Trend[idx].question}</QuestionBox>
+        <QuestionIndex>{idx + 1}번</QuestionIndex>
+        <QuestionBox>
+          {Trend[idx].question + " " + Trend[idx].score}점
+        </QuestionBox>
+        <Score></Score>
       </QuestionWrapper>
     </>
   );
 };
+
+const Score = styled.div``;
 
 const QuestionWrapper = styled.div`
   width: 100%;

@@ -22,3 +22,8 @@
   src: url("./AppleSDGothicNeoB.ttf");
   font-weight: bold;
 }
+
+@font-face {
+  font-family: "AppleSDM";
+  src: url("./AppleSDGothicNeoM.ttf");
+}

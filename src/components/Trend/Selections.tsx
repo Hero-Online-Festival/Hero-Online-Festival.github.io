@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { Trend } from "../../common/Selections";
+import { useDispatch } from "react-redux";
+import { updateTrendAnswer } from "../../stores/trend/trend";
 interface ISelection {
   idx: number;
 }
 
 export const Selections = ({ idx }: ISelection): React.ReactElement => {
-  const route = idx === 12 ? `/result/trend` : `/trend/${idx + 1}`;
-
+  const route = idx === 11 ? `/result/trend` : `/trend/${idx + 1}`;
+  const dispatch = useDispatch();
+  const onUpdateTrendAnswer = useCallback(
+    (answer: number, idx: number) => {
+      dispatch(updateTrendAnswer({ answer, questionIdx: idx }));
+    },
+    [dispatch]
+  );
   return (
     <>
       <SelectionsWrapper>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{Trend[idx].selectionOne}</Selection>
+          <Selection onClick={() => onUpdateTrendAnswer(1, idx)}>
+            {Trend[idx].selectionOne}
+          </Selection>
         </Link>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{Trend[idx].selectionTwo}</Selection>
+          <Selection onClick={() => onUpdateTrendAnswer(2, idx)}>
+            {Trend[idx].selectionTwo}
+          </Selection>
         </Link>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{Trend[idx].selectionThree}</Selection>
+          <Selection onClick={() => onUpdateTrendAnswer(3, idx)}>
+            {Trend[idx].selectionThree}
+          </Selection>
         </Link>
         <Link to={route} style={{ textDecoration: "none" }}>
-          <Selection>{Trend[idx].selectionFour}</Selection>
+          <Selection onClick={() => onUpdateTrendAnswer(4, idx)}>
+            {Trend[idx].selectionFour}
+          </Selection>
         </Link>
       </SelectionsWrapper>
     </>

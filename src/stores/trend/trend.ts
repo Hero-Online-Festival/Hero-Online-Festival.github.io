@@ -5,11 +5,11 @@ interface ITREND {
   answer: number; //+1 혹은 -1
 }
 
-type TTREND = {
+export type TTrend = {
   answers: Array<number>;
 };
 
-const initialState: TTREND = {
+const initialState: TTrend = {
   answers: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 };
 

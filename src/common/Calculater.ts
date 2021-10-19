@@ -1,7 +1,8 @@
 import { Trend as TrendQuestion } from "./Questions";
+import { MBTIType } from "./Result";
 import { Trend as TrendSelect } from "./Selections";
 
-function MBTIScorePermute(scores: Array<number>): string {
+function MBTIScorePermute(scores: Array<number>): MBTIType {
   let grade: string = "";
   if (scores[0] > 0) {
     grade += "E";
@@ -23,12 +24,14 @@ function MBTIScorePermute(scores: Array<number>): string {
   } else {
     grade += "P";
   }
-  return grade;
+  return grade as MBTIType;
 }
 
 function TrendScorePermute(scores: Array<number>): number {
   let score: number = 0;
   scores.map((answer, index) => {
+    console.log(`ANSWER`, answer);
+    console.log(TrendSelect[index].answer);
     if (answer === TrendSelect[index].answer) {
       score += TrendQuestion[index].score;
     }
