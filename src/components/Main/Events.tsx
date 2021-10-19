@@ -37,7 +37,7 @@ export const Events = ({
 const EventsWrapper = styled.div`
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   background-color: #fff;
   cursor: pointer;
 `;

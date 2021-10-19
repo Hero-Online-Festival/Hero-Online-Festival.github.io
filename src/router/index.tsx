@@ -16,9 +16,9 @@ import "../style/font/font.css";
 const GlobalCSS = css`
   body {
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     margin: auto;
-    background-color: #eaeaea;
+    background-color: #fff;
   }
 `;
 
