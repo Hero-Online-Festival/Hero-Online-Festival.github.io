@@ -22,7 +22,6 @@ const reducer = createSlice({
   initialState,
   reducers: {
     updateMBTIAnswer: (state, action: PayloadAction<IMBTI>) => {
-      console.log(action.payload.questionIdx);
       switch (action.payload.questionIdx) {
         case 0:
         case 3:

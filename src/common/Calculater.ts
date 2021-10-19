@@ -30,8 +30,6 @@ function MBTIScorePermute(scores: Array<number>): MBTIType {
 function TrendScorePermute(scores: Array<number>): number {
   let score: number = 0;
   scores.map((answer, index) => {
-    console.log(`ANSWER`, answer);
-    console.log(TrendSelect[index].answer);
     if (answer === TrendSelect[index].answer) {
       score += TrendQuestion[index].score;
     }

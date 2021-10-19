@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 const Page = (): React.ReactElement => {
   const history = useHistory();
   const onLinkToMain = () => {
-    console.log("asdf");
     history.push("/main");
   };
 

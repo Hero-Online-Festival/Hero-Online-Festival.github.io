@@ -7,22 +7,24 @@ interface IMain {
   grade: MBTIType;
 }
 
+type MainImage = {
+  grade: MBTIType;
+};
+
 export const Main = ({ grade }: IMain): React.ReactElement => {
   return (
     <>
       <MainWrapper>
-        <Title color={MBTI[grade].color}>
-          {" " + MBTI[MBTIType.ENFP].title + " "}
-        </Title>
-        <MainImage />
-        <SubTitle>{MBTI[MBTIType.ENFP].subTitle}</SubTitle>
+        <Title color={MBTI[grade].color}>{" " + MBTI[grade].title + " "}</Title>
+        <MainImage grade={grade} />
+        <SubTitle>{MBTI[grade].subTitle}</SubTitle>
       </MainWrapper>
     </>
   );
 };
 
 const MainImage = styled.div`
-  background-image: url(${MBTI[MBTIType.ENFP].image});
+  background-image: url(${(props: MainImage) => MBTI[props.grade].image});
   background-size: cover;
   background-repeat: none;
   margin: auto;
