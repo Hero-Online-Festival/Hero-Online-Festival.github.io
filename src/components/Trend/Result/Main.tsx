@@ -15,7 +15,7 @@ export const Main = ({ score }: IMain): React.ReactElement => {
     <>
       <MainWrapper>
         <Title>{Trend[score].title}</Title>
-        <SubTitle>{Trend[score].subTitle}</SubTitle>
+        <SubTitle color={Trend[score].color}>{Trend[score].subTitle}</SubTitle>
         <Score>{Trend[score].score}</Score>
         <MainImage score={score} />
       </MainWrapper>
@@ -28,13 +28,13 @@ const MainImage = styled.div`
   background-size: cover;
   background-repeat: none;
   margin: auto;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   margin-top: 1rem;
 `;
 const MainWrapper = styled.div`
   width: fit-content;
-  height: 30%;
+  height: 20%;
   margin: auto;
   margin-top: 2rem;
 `;
@@ -49,6 +49,7 @@ const SubTitle = styled.div`
   font-family: "AppleSDB";
   font-size: 2rem;
   text-align: center;
+  box-shadow: inset 0 -20px 0 ${(props) => props.color};
 `;
 
 const Score = styled.div`

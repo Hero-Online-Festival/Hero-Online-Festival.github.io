@@ -42,7 +42,7 @@ const MainButton = styled.div`
   width: 50%;
   margin: auto;
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   text-align: center;
   border-radius: 10px;
   font-family: "AppleSDB";
@@ -63,11 +63,13 @@ const ResultWrapper = styled.div`
   background-color: #fff;
   margin: auto;
   width: 70%;
-  height: 70%;
+  height: fit-content;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   margin-top: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 export default Page;

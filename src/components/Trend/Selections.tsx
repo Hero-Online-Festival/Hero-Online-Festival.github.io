@@ -47,7 +47,7 @@ export const Selections = ({ idx }: ISelection): React.ReactElement => {
 
 const SelectionsWrapper = styled.div`
   width: 100%;
-  height: 60%;
+  height: 50%;
   margin: auto;
   text-align: center;
   display: flex;
@@ -62,7 +62,7 @@ const Selection = styled.div`
   color: #000;
   padding: 5px;
   cursor: pointer;
-  height: 3rem;
+  height: 2.5rem;
   display: flex;
   flex-direction: column;
   white-space: pre-line;

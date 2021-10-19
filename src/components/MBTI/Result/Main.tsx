@@ -36,7 +36,7 @@ const MainImage = styled.div`
 
 const MainWrapper = styled.div`
   width: fit-content;
-  height: 30%;
+  height: 20%;
   margin: auto;
   margin-top: 2rem;
 `;

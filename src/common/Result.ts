@@ -221,6 +221,7 @@ type TrendType = {
   description: string;
   item: string;
   image: string;
+  color: string;
 };
 
 export const Trend: Record<number, TrendType> = {
@@ -232,6 +233,7 @@ export const Trend: Record<number, TrendType> = {
       "당신의 트렌드 나이는 여전히 그때에,,, SNS를 별로 안 하는 편이군요! 당신의 취미는 혹시 바둑이나 등산? 그래도 트렌드는 돌고 돌으니 언젠간 당신이 가장 트렌드를 잘 아는 사람이 될 수도 있어요!",
     item: "줄 이어폰",
     image: HeadPhonse,
+    color: "#eef57e8c",
   },
   [2]: {
     title: "응애!",
@@ -241,6 +243,7 @@ export const Trend: Record<number, TrendType> = {
       "아무것도 모르는 당신은 애기! 아직 세상에 눈뜨지 않은 당신! 그래도 조금은 트렌드를 알고 있는 당신은 친구들에게 들은 내용으로 트렌드를 아는 경우가 많겠어요!",
     item: "급식판",
     image: Tray,
+    color: "#a1e2fb8c",
   },
   [3]: {
     title: "혹시 아직도 삐삐 사용중?",
@@ -250,6 +253,7 @@ export const Trend: Record<number, TrendType> = {
       "‘응답하다 1994’를 보면서 엄청난 폭풍 공감을 했을 당신! X세대에 속해, Z세대와 공감하기에는 아직 부족한거 같군요. 트랜드에 어울리기 위한 노력이 조금 요구되고 있어요.",
     item: "삐삐, 카세트테이프",
     image: AudioTape,
+    color: "#9d9d9d8c",
   },
   [4]: {
     title: "응원 다녀오셨어요?",
@@ -259,6 +263,7 @@ export const Trend: Record<number, TrendType> = {
       "혹시 기억 속에 붉은 티를 입고 거리 응원 해봤을 당신! Z세대가 되고 위해 노력하고 있지만, 잘못하면 M세대 사람인게 티날 수 있을거 같군요. 조금만 더 노력하면 얼리어답터가 될 수 있을 거예요.",
     item: "붉은악마 티셔츠",
     image: Devil,
+    color: "#ff24248c",
   },
   [5]: {
     title: "자네 도토리 좀 모아봤나?",
@@ -268,6 +273,7 @@ export const Trend: Record<number, TrendType> = {
       "폴더폰으로 서로의 안부를 주고 받던 그 시절.. 싸이월드 감성을 아직 잊지 못하셨군요. 젊은 친구들의 유행이 다소 버겁더라도, 열심히 배우려 노력하는 자세가 멋지네요. 기억 저 편의 싸이월드가 다시 부활한 것처럼, 여러분의 젊은 감각도 곧 돌아올 거에요~",
     item: "폴더폰, mp3",
     image: FoldingPhone,
+    color: "#8102028c",
   },
   [6]: {
     title: "롸떼는 말이야~",
@@ -277,6 +283,7 @@ export const Trend: Record<number, TrendType> = {
       "동 틀 때까지 술과 함께한 축제부터, 당당히 금메달 걸고 나간 중간고사까지 이제 학교의 어엿한 대선배가 되어 후배들에게 동경과 선망을 받는 당신! 대학생의 로망을 모두 경험해 본 그대가 진정한 위너 ..?",
     item: "롱패딩",
     image: DownJacket,
+    color: "#93ff8c8c",
   },
   [7]: {
     title: "혼자서도 잘 놀아요!",
@@ -286,6 +293,7 @@ export const Trend: Record<number, TrendType> = {
       "코로나 학번으로 반강제 혼순이가 되어버린 20학번, 그래도 혼자서도 잘 놀았군요? 트렌드를 굉장히 많이 알고 있는 당신!",
     item: "마스크",
     image: Mask,
+    color: "#fdf1c58c",
   },
   [8]: {
     title: "당신은 진정한 Z세대!",
@@ -295,5 +303,6 @@ export const Trend: Record<number, TrendType> = {
       "당신은 사람들이 말하는 ‘요즘 애들’입니다. 스우파, 쇼미, 오징어게임을 보지 않아도 내용을 다 알고있는 당신은 인싸! 어딜가든 주목을 받고, 이야기 보따리가 끊임없이 나오는군요! 모두가 부러워할만한 트렌디함을 가졌군요!",
     item: "스마트워치",
     image: SmartWatch,
+    color: "#ffaee28c",
   },
 };

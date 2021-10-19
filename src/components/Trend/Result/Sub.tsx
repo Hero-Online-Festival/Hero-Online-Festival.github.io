@@ -10,8 +10,10 @@ export const Sub = ({ score }: ISub): React.ReactElement => {
   return (
     <>
       <SubWrapper>
-        <Description>{Trend[score].description}</Description>
         <Item>필수템 : {Trend[score].item}</Item>
+        <Description color={Trend[score].color}>
+          {Trend[score].description}
+        </Description>
       </SubWrapper>
     </>
   );
@@ -34,7 +36,7 @@ const Description = styled.div`
   padding: 1rem;
   margin: auto;
   margin-top: 1rem;
-  background-color: #5671d38c;
+  background-color: ${(props) => props.color};
   border-radius: 10px;
 
   font-size: 1rem;
