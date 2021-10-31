@@ -51,7 +51,7 @@ const Page = (): React.ReactElement => {
               description="최후의 1인은 과연?"
               linkText="자세한 내용은 클릭"
               link="/detail"
-              id=""
+              id="heroGame"
             />
           </EventsWrapper>
         </MainWrapper>

@@ -41,6 +41,14 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
               onLinkTo(isMentor);
               return;
             }
+            if (isMentor === "/heroGame") {
+              alert("준비 중입니다.");
+              // onLinkTo("/herogame");
+              return;
+            }
+            window.open(
+              "https://instagram.com/2021_ku_engineering?utm_medium=copy_link"
+            );
           }}
         >
           자세히 알아보기

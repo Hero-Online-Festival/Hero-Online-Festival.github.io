@@ -49,6 +49,8 @@ const ButtonWrapper = styled.div`
   width: 70%;
   justify-content: space-between;
   margin: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 `;
 
 const SpaceButton = styled.div`

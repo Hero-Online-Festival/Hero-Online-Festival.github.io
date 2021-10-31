@@ -9,6 +9,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { DetailPage } from "../page/Detail";
+import { HeroGamePage } from "../page/HeroGame";
 import { LandingPage } from "../page/Landing";
 import { MainPage } from "../page/Main";
 import { MBTIPage, MBTIResultPage } from "../page/MBTI";
@@ -39,6 +40,7 @@ const Router = (): React.ReactElement => {
         <Route exact path="/detail/:id" component={DetailPage} />
         <Route exact path="/mentor" component={MentorPage} />
         <Route exact path="/mentor/answer/:id" component={MentorAnswerPage} />
+        <Route exact path="/herogame" component={HeroGamePage} />
       </Switch>
     </HashRouter>
   );

@@ -31,7 +31,13 @@ export const Page = (): React.ReactElement => {
           <Main grade={grade} />
           <Sub grade={grade} />
         </ResultWrapper>
-        <ApplyButton>이벤트 응모하기</ApplyButton>
+        <ApplyButton
+          onClick={() => {
+            window.open("http://naver.me/FpXdDx12");
+          }}
+        >
+          이벤트 응모하기
+        </ApplyButton>
         <MainButton onClick={onLinkTo}>메인으로 돌아가기</MainButton>
       </ResultPage>
     </>

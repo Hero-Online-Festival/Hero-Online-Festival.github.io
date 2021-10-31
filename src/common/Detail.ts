@@ -1,6 +1,7 @@
 import LCH from "../style/image/lch.png";
 import SONG from "../style/image/song.png";
 import MENTOR from "../style/image/mentor.png";
+import HEROGAME from "../style/image/HeroGame.png";
 interface IDetail {
   phase: string;
   title: string;
@@ -34,5 +35,14 @@ export const Detail: Record<string, IDetail> = {
     image: MENTOR,
     color: "#332a53ad",
     description: `멘토링은 다음과 같은 방식으로 진행됩니다.\n\n1️⃣ 공과대학 학우분들의 질문 조사\n2️⃣ 질문을 졸업자 & 현직자분들께 전달\n3️⃣ 답변 취합 및 게시\n\n✔️ 답변 게시일 : 2021.11.01\n\n❗️무분별한 질문 및 중복된 질문의 경우 검열될 수 있습니다.\n❗️현직자의 경우  "공과대학 신산업융합학과" 재직자를 대상으로 멘토링이 진행됩니다.`,
+  },
+  heroGame: {
+    phase: "6",
+    title: "히어로 게임",
+    subTitle: "“최후의 1인은 누가 될 것인가?”",
+    image: HEROGAME,
+    color: "#b10000",
+    description:
+      "zoom을 통한 게임으로 끝까지 살아남아 우승을 거머쥐세요!\n\n🔔우승상품 : Apple 에어팟 프로\n🔔참가상품 : 참가자들 중 추첨을 통해 30명'깐부치킨 오징어치킨'을 드립니다.\n\n✔ 참가접수기간 : 11월 1일 (월) ~ 11월 2일 (화) 17:00\n✔ 게임진행방식 : zoom을 통한 진행\n✔ 게임진행날짜 : 11월 5일 (금) 밤 10시\n\n🚨게임 룰🚨 \n⭕해당 게임은 실력에 의존하지 않는 게임들로 구성되어 있습니다.\n⭕참가자는 본인의 고유 부여번호로 이름을 설정해  zoom을 참가합니다.(ex. 001)\n⭕참가 접수 후 본인 고유번호는 11.3(수)에 추가게시물을 통해 부여받으실 수 있습니다.\n⭕패자부활은 일체 없으며 해당 라운드에 탈락 시 게임이 종료됩니다.\n⭕게임의 내용은 진행 당일 실시간으로 진행자의 멘트에 의해 공개됩니다.\n⭕진행자의 지시와 안내가 중요하므로 인터넷 연결이 원활하게 이루어질 수 있는 환경에서 게임을 진행해야 합니다.\n\n🔍추가문의는 카카오톡 건국대학교 공과대학 학생회 플러스친구를 통해 문의하시면 빠르게 해결하실 수 있습니다.",
   },
 };
