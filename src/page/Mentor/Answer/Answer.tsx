@@ -168,7 +168,7 @@ const EventsWrapper = styled.div`
 const AnswerText = styled.div`
   color: #000;
   margin-top: 30px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: "AppleSDM";
   white-space: pre-line;
 `;

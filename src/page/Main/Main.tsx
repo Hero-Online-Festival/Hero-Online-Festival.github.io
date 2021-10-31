@@ -70,7 +70,6 @@ const EventsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 2rem;
 `;
 
 const MainText = styled.div`
