@@ -41,6 +41,8 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
     <>
       <AnswerPage>
         <Header />
+        <TitleText>[{mentor.title} QnA]</TitleText>
+
         <AnswerWrapper>
           <QuestionText>
             {"Q" + `${index + 1}` + "."}
@@ -67,6 +69,13 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
   );
 };
 export default Page;
+const TitleText = styled.div`
+  font-family: "AppleSDB";
+  font-size: 1.1rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 4rem;
+`;
 
 const PreviousButton = styled.div`
   margin-top: auto;
@@ -136,7 +145,7 @@ const AnswerWrapper = styled.div`
   background-color: #fff;
   border-radius: 10px;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
