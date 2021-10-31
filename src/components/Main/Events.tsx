@@ -51,6 +51,7 @@ const EventsTitle = styled.div`
   width: fit-content;
   height: fit-content;
   font-family: "AppleSDB";
+  white-space: pre-line;
 `;
 
 const EventsTextWrapper = styled.div`
