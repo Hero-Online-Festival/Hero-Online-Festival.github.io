@@ -66,7 +66,6 @@ const ButtonWrapper = styled.div`
 const SpaceButton = styled.div`
   width: 30px;
   height: 30px;
-  padding: 5px;
 `;
 
 const PreviousButton = styled.div`
