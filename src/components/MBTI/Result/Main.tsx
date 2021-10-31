@@ -60,4 +60,5 @@ const Title = styled.div`
 const SubTitle = styled.div`
   text-align: center;
   font-family: "AppleSDB";
+  white-space: pre-line;
 `;

@@ -27,3 +27,9 @@
   font-family: "AppleSDM";
   src: url("./AppleSDGothicNeoM.ttf");
 }
+
+@font-face {
+  font-family: "DarkKnight";
+  src: url("./DKC.ttf");
+  font-weight: bold;
+}

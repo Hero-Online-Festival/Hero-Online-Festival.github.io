@@ -2,29 +2,32 @@ import { Global, css } from "@emotion/react";
 import React from "react";
 import {
   BrowserRouter,
+  HashRouter,
   Switch,
   Route,
   RouteProps,
   useLocation,
 } from "react-router-dom";
+import { DetailPage } from "../page/Detail";
 import { LandingPage } from "../page/Landing";
 import { MainPage } from "../page/Main";
 import { MBTIPage, MBTIResultPage } from "../page/MBTI";
+import { MentorPage, MentorAnswerPage } from "../page/Mentor";
 import { TrendPage, TrendResultPage } from "../page/Trend";
 import "../style/font/font.css";
 
 const GlobalCSS = css`
   body {
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     margin: auto;
-    background-color: #fff;
+    background-color: #f2f0f0;
   }
 `;
 
 const Router = (): React.ReactElement => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Global styles={GlobalCSS} />
       <Switch>
         <Route exact path="/" component={LandingPage} />
@@ -33,8 +36,11 @@ const Router = (): React.ReactElement => {
         <Route exact path="/result/mbti" component={MBTIResultPage} />
         <Route exact path="/trend/:idx" component={TrendPage} />
         <Route exact path="/result/trend" component={TrendResultPage} />
+        <Route exact path="/detail/:id" component={DetailPage} />
+        <Route exact path="/mentor" component={MentorPage} />
+        <Route exact path="/mentor/answer/:id" component={MentorAnswerPage} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

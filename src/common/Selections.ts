@@ -25,8 +25,8 @@ export const MBTI = [
     selectionTwo: `지금 집 앞에 찾아온다.`,
   },
   {
-    selectionOne: `그동안 했던 데이트 중 가장 좋았던 데이트와\n 비슷한 데이트를 하자고 한다.`,
-    selectionTwo: `특별한 날이니 그동안 못해본\n 특별한 데이트를 하자고 한다.`,
+    selectionOne: `그동안 했던 데이트 중 가장 좋았던 데이트와 비슷한 데이트를 하자고 한다.`,
+    selectionTwo: `특별한 날이니 그동안 못 해본 특별한 데이트를 하자고 한다.`,
   },
   {
     selectionOne: `구체적인 일정까지 다 계획한다.`,
@@ -37,8 +37,8 @@ export const MBTI = [
     selectionTwo: `미래 계획에 대해 3시간 이야기`,
   },
   {
-    selectionOne: `고생했어. 열심히 한거 내가 알아!\n 맛있는거 먹으면서 기분 풀자!`,
-    selectionTwo: `무슨 과목인데? 기말고사 때\n 열심히 하면 좋은 결과 나올 거야!`,
+    selectionOne: `고생했어. 열심히 한거 내가 알아! 맛있는거 먹으면서 기분 풀자!`,
+    selectionTwo: `무슨 과목인데? 기말고사 때 열심히 하면 좋은 결과 나올 거야!`,
   },
   {
     selectionOne: `너의 친구는 내 친구! 내 친구들과도 잘 어울려 논다.`,

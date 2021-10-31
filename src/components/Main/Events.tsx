@@ -7,6 +7,8 @@ interface IEvents {
   description: string;
   linkText: string;
   link: string;
+  id: string;
+  idx?: string;
 }
 
 export const Events = ({
@@ -14,16 +16,18 @@ export const Events = ({
   description,
   linkText,
   link,
+  id,
+  idx,
 }: IEvents): React.ReactElement => {
   const history = useHistory();
-  const onLinKTo = (link: string) => {
+  const onLinKTo = (link: string, id: string, idx?: string) => {
     history.replace({
-      pathname: `${link}/0`,
+      pathname: `${link}/${id}/${idx}`,
     });
   };
   return (
     <>
-      <EventsWrapper onClick={() => onLinKTo(link)}>
+      <EventsWrapper onClick={() => onLinKTo(link, id, idx)}>
         <EventsTitle>{title}</EventsTitle>
         <EventsTextWrapper>
           <EventsDescription>{description}</EventsDescription>

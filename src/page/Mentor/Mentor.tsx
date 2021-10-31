@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Header, Events } from "../../components/Main";
+import { Events, Header } from "../../components/Main";
 
 const Page = (): React.ReactElement => {
   return (
     <>
-      <MainPage>
+      <MentorPage>
         <Header />
-        <MainWrapper>
-          <MainText>이벤트</MainText>
+        <MentorWrapper>
+          <MentorText>졸업자 및 현직자 멘토링</MentorText>
           <EventsWrapper>
             <Events
               title="현대모비스"
@@ -99,12 +99,17 @@ const Page = (): React.ReactElement => {
               idx="0"
             />
           </EventsWrapper>
-        </MainWrapper>
-      </MainPage>
+        </MentorWrapper>
+      </MentorPage>
     </>
   );
 };
-const MainWrapper = styled.div`
+
+export default Page;
+
+const MentorPage = styled.div``;
+
+const MentorWrapper = styled.div`
   width: 85%;
   height: fit-content;
   margin: auto;
@@ -119,17 +124,9 @@ const EventsWrapper = styled.div`
   margin-top: 20px;
 `;
 
-const MainText = styled.div`
+const MentorText = styled.div`
   color: #000;
   margin-top: 30px;
   font-size: 1.2rem;
   font-family: "AppleSDB";
 `;
-
-const MainPage = styled.div`
-  width: 100%;
-  height: fit-content;
-  background-color: #f2f0f0;
-  padding-bottom: 5rem;
-`;
-export default Page;

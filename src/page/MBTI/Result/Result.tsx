@@ -31,13 +31,14 @@ export const Page = (): React.ReactElement => {
           <Main grade={grade} />
           <Sub grade={grade} />
         </ResultWrapper>
+        <ApplyButton>이벤트 응모하기</ApplyButton>
         <MainButton onClick={onLinkTo}>메인으로 돌아가기</MainButton>
       </ResultPage>
     </>
   );
 };
 
-const MainButton = styled.div`
+const ApplyButton = styled.div`
   cursor: pointer;
   width: 50%;
   margin: auto;
@@ -53,9 +54,27 @@ const MainButton = styled.div`
   background-color: #0765cd;
 `;
 
+const MainButton = styled.div`
+  cursor: pointer;
+  width: 50%;
+  margin: auto;
+  height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "AppleSDB";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-color: #0765cd;
+`;
+
 const ResultPage = styled.div`
   width: 100%;
-  height: 100vh;
+  height: fit-content;
+  padding-bottom: 3rem;
   background-color: #f2f0f0;
 `;
 

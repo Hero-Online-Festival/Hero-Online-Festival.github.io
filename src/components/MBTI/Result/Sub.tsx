@@ -33,7 +33,7 @@ const SubWrapper = styled.div`
 
 const TopText = styled.div`
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 0.9rem;
   font-family: "AppleSDB";
 `;
@@ -41,7 +41,7 @@ const TopText = styled.div`
 const MidText = styled.div`
   text-align: center;
   line-height: 1.3rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: auto;
   margin-bottom: 1rem;
   font-family: "AppleSDB";
@@ -49,7 +49,7 @@ const MidText = styled.div`
 
 const BottomText = styled.div`
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 
   margin: auto;
   font-family: "AppleSDB";

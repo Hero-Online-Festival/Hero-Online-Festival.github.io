@@ -47,7 +47,7 @@ const Description = styled.div`
 const Item = styled.div`
   text-align: center;
   font-size: 1rem;
-  width: 70%;
+  width: 100%;
   margin: auto;
   font-family: "AppleSDB";
 `;
