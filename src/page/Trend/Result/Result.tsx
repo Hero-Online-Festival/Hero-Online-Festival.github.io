@@ -70,7 +70,7 @@ const ResultPage = styled.div`
 const ResultWrapper = styled.div`
   background-color: #fff;
   margin: auto;
-  width: 70%;
+  width: 100%;
   height: fit-content;
   padding-bottom: 20px;
   display: flex;

@@ -60,7 +60,7 @@ const Page = (): React.ReactElement => {
   );
 };
 const MainWrapper = styled.div`
-  width: 85%;
+  width: 90%;
   height: fit-content;
   margin: auto;
 `;

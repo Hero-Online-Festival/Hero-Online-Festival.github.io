@@ -70,7 +70,7 @@ const PhaseText = styled.div`
 `;
 
 const DetailText = styled.div`
-  width: 90%;
+  width: 100%;
   margin: auto;
   white-space: pre-wrap;
   line-height: 1.2rem;
@@ -143,7 +143,7 @@ const DetailPage = styled.div`
 const DetailWrapper = styled.div`
   background-color: #fff;
   margin: auto;
-  width: 65%;
+  width: 85%;
   height: fit-content;
   padding: 1rem;
   display: flex;
