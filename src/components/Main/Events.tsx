@@ -8,7 +8,6 @@ interface IEvents {
   linkText: string;
   link: string;
   id: string;
-  idx?: string;
 }
 
 export const Events = ({
@@ -17,17 +16,16 @@ export const Events = ({
   linkText,
   link,
   id,
-  idx,
 }: IEvents): React.ReactElement => {
   const history = useHistory();
   const onLinKTo = (link: string, id: string, idx?: string) => {
     history.replace({
-      pathname: `${link}/${id}/${idx}`,
+      pathname: `${link}/${id}`,
     });
   };
   return (
     <>
-      <EventsWrapper onClick={() => onLinKTo(link, id, idx)}>
+      <EventsWrapper onClick={() => onLinKTo(link, id)}>
         <EventsTitle>{title}</EventsTitle>
         <EventsTextWrapper>
           <EventsDescription>{description}</EventsDescription>
@@ -41,9 +39,10 @@ export const Events = ({
 const EventsWrapper = styled.div`
   border-radius: 10px;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 2rem;
   background-color: #fff;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 const EventsTitle = styled.div`
@@ -68,4 +67,5 @@ const EventsDescription = styled.div`
 const EventsLinkText = styled.div`
   color: #8d8d8d;
   font-size: 0.8rem;
+  font-family: "AppleSDM";
 `;

@@ -11,92 +11,46 @@ const Page = (): React.ReactElement => {
           <MainText>이벤트</MainText>
           <EventsWrapper>
             <Events
-              title="현대모비스"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
+              title="LCH"
+              description="공대의 진짜 롤 챔피언은?"
+              linkText="자세한 내용은 클릭"
+              link="/detail"
+              id="lol"
+            />
+            <Events
+              title="공대 가요제"
+              description="공대 가왕은 누구?"
+              linkText="자세한 내용은 클릭"
+              link="/detail"
+              id="songFestival"
+            />
+            <Events
+              title="히어로 게임"
+              description="최후의 1인은 과연?"
+              linkText="자세한 내용은 클릭"
+              link="/detail"
+              id=""
+            />
+            <Events
+              title="졸업생 & 현직자 멘토링"
+              description="진로 고민 해결!!"
+              linkText="자세한 내용은 클릭"
+              link="/mentor"
+              id=""
+            />
+            <Events
+              title="이상형 학과 테스트"
+              description="내 이상형은 어디에...?"
+              linkText="테스트 하려면 클릭"
+              link="/mbti"
               id="0"
-              idx="0"
             />
             <Events
-              title="라인플러스"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="1"
-              idx="0"
-            />
-            <Events
-              title="삼성SDI"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="2"
-              idx="0"
-            />
-            <Events
-              title="삼성LSI"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="3"
-              idx="0"
-            />
-            <Events
-              title="도로교통공단"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="4"
-              idx="0"
-            />
-            <Events
-              title="지역난방공사"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="5"
-              idx="0"
-            />
-            <Events
-              title="한국도로공사"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="6"
-              idx="0"
-            />
-            <Events
-              title="한국석유공사"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="7"
-              idx="0"
-            />
-            <Events
-              title="한국전력공사"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="8"
-              idx="0"
-            />
-            <Events
-              title="NC소프트"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="9"
-              idx="0"
-            />{" "}
-            <Events
-              title="KT&G"
-              description=""
-              linkText="답변을 보고 싶다면...?"
-              link="/mentor/answer"
-              id="10"
-              idx="0"
+              title="내 안의 학번 테스트"
+              description="내 진짜 학번은...?"
+              linkText="테스트 하려면 클릭"
+              link="/trend"
+              id="0"
             />
           </EventsWrapper>
         </MainWrapper>
@@ -116,7 +70,7 @@ const EventsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 2rem;
 `;
 
 const MainText = styled.div`
