@@ -123,9 +123,11 @@ const NextButton = styled.div`
 
 const ButtonWrapper = styled.div`
   width: 90%;
+  position: absolute;
+  bottom: 3rem;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  left: 5%;
   margin-top: 3rem;
   margin-bottom: 5rem;
 `;
