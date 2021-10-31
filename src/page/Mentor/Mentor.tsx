@@ -88,6 +88,13 @@ const Page = (): React.ReactElement => {
               id="9"
             />
             <Events
+              title="토스"
+              description=""
+              linkText="답변을 보고 싶다면...?"
+              link="/mentor/answer"
+              id="11"
+            />
+            <Events
               title="KT&G"
               description=""
               linkText="답변을 보고 싶다면...?"

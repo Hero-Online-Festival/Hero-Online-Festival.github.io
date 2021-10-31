@@ -74,7 +74,7 @@ const TitleText = styled.div`
   font-size: 1.1rem;
   width: 90%;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
 
 const PreviousButton = styled.div`
@@ -123,13 +123,12 @@ const NextButton = styled.div`
 
 const ButtonWrapper = styled.div`
   width: 90%;
-  position: absolute;
-  bottom: 3rem;
+
   display: flex;
   justify-content: space-between;
-  left: 5%;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 `;
 
 const QuestionText = styled.div`
@@ -175,7 +174,6 @@ const AnswerText = styled.div`
 
 const AnswerPage = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 1000px;
   background-color: #f2f0f0;
-  padding-bottom: 5rem;
 `;
