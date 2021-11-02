@@ -40,25 +40,25 @@ const Page = (): React.ReactElement => {
     setTab(tab + 1);
   }, [tab]);
 
-  const onCheck = () => {
+  const onCheck = (): boolean => {
     if (!HeroGameData[input.name]) {
       alert("이름을 다시 입력해주세요");
       window.location.reload();
+      return false;
     }
 
     if (HeroGameData[input.name].phoneNum !== input.phoneNum) {
       alert("핸드폰번호를 다시 입력해주세요");
       window.location.reload();
+      return false;
     }
 
     if (HeroGameData[input.name].stdNum !== Number(input.stdNum)) {
-      alert(
-        `학번을 다시 입력해주세요${input.stdNum},${
-          HeroGameData[input.name].stdNum
-        }`
-      );
+      alert(`학번을 다시 입력해주세요`);
       window.location.reload();
+      return false;
     }
+    return true;
   };
 
   const onResult = useCallback(() => {
@@ -114,7 +114,10 @@ const Page = (): React.ReactElement => {
                 />
                 <StdNumButton
                   onClick={() => {
-                    onCheck();
+                    if (!onCheck()) {
+                      window.location.reload();
+                      return;
+                    }
                     onResult();
                   }}
                 >
