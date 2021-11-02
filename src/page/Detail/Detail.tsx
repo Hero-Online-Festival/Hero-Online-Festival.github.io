@@ -42,8 +42,7 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
               return;
             }
             if (isMentor === "/heroGame") {
-              alert("준비 중입니다.");
-              // onLinkTo("/herogame");
+              onLinkTo("/herogame");
               return;
             }
             window.open(
@@ -51,7 +50,9 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
             );
           }}
         >
-          자세히 알아보기
+          {isMentor === "/heroGame"
+            ? "히어로 게임 신청하기"
+            : "자세히 알아보기"}
         </DetailButton>
         <MainButton onClick={() => onLinkTo("/main")}>
           메인으로 돌아가기
