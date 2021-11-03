@@ -5,6 +5,7 @@ import { toIdentifier } from "@babel/types";
 import { useState } from "react";
 import { HeroGameData } from "../../common/HeroGameData";
 import { useCallback } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 type HeroGameInput = {
   phoneNum: string;
@@ -128,6 +129,19 @@ const Page = (): React.ReactElement => {
             {isCorrect && (
               <>
                 <ResultText>당신의 참가번호는 {result}번입니다.</ResultText>
+                <br />
+                <ResultSubText>
+                  아래 버튼을 눌러 카카오 오픈 채팅방 링크를 복사하세요.
+                </ResultSubText>
+                <CopyToClipboard text="https://open.kakao.com/o/gPRAfeId">
+                  <ChatButton
+                    onClick={() => {
+                      alert("주소가 복사되었습니다.");
+                    }}
+                  >
+                    오픈 채팅방 주소 복사하기
+                  </ChatButton>
+                </CopyToClipboard>
                 <MainButton onClick={onLinkToMain}>
                   메인으로 돌아가기
                 </MainButton>
@@ -151,10 +165,24 @@ const MainWrapper = styled.div`
 
 const MainButton = styled.div`
   text-align: center;
-
+  cursor: pointer;
   background-color: #000;
   color: #fff;
   width: 40%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+`;
+
+const ChatButton = styled.div`
+  text-align: center;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  width: 50%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin: auto;
@@ -170,8 +198,15 @@ const ResultText = styled.div`
   font-size: 1.7rem;
 `;
 
+const ResultSubText = styled.div`
+  text-align: center;
+  color: #fff;
+  font-family: "NixGon";
+  font-size: 1.2rem;
+`;
+
 const StdNumInput = styled.input`
-  width: 50%;
+  width: 70%;
   height: 2rem;
   margin: auto;
   font-size: 1.2rem;
@@ -183,7 +218,7 @@ const StdNumInput = styled.input`
 
 const StdNumButton = styled.div`
   text-align: center;
-
+  cursor: pointer;
   background-color: #000;
   color: #fff;
   width: 40%;
@@ -203,7 +238,7 @@ const StdText = styled.div`
 `;
 
 const PhoneNumInput = styled.input`
-  width: 50%;
+  width: 70%;
   height: 2rem;
   margin: auto;
   font-size: 1.2rem;
@@ -221,7 +256,7 @@ const PhoneText = styled.div`
 `;
 
 const NameInput = styled.input`
-  width: 50%;
+  width: 70%;
   height: 2rem;
   margin: auto;
   font-size: 1.2rem;

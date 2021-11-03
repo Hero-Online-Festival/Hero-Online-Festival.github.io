@@ -50,9 +50,7 @@ const Page = ({ match }: RouteComponentProps<TParams>): React.ReactElement => {
             );
           }}
         >
-          {isMentor === "/heroGame"
-            ? "히어로 게임 신청하기"
-            : "자세히 알아보기"}
+          {isMentor === "/heroGame" ? "참가번호 확인하기" : "자세히 알아보기"}
         </DetailButton>
         <MainButton onClick={() => onLinkTo("/main")}>
           메인으로 돌아가기
